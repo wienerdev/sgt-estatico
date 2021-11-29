@@ -1,0 +1,31 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <mat-nav-list  class="nav-list">
+            <a mat-list-item routerLink="/">
+                <mat-icon>home</mat-icon>Home
+            </a>
+            <a mat-list-item routerLink="tarefas">
+                <mat-icon>assignment</mat-icon>Tarefas
+            </a>
+            <a mat-list-item routerLink="responsavel">
+                <mat-icon>person_search</mat-icon>Setor Responsável
+            </a>
+
+          <a mat-list-item routerLink="comentario">
+            <mat-icon>person_search</mat-icon>Comentário
+          </a>
+
+          <a mat-list-item routerLink="tipotarefas">
+            <mat-icon>person_search</mat-icon>Tipo de Tarefa
+          </a>
+        </mat-nav-list >
+    </mat-drawer >
+
+    <div class="sidenav-content">
+        <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-drawer-container>

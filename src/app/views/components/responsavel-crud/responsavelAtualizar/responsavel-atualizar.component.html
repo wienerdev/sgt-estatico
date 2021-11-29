@@ -1,0 +1,29 @@
+<form class="form mat-elevation-z0">
+
+  <h1>ATUALIZAR SETOR RESPONSÁVEL</h1>
+
+  <mat-form-field appearance="fill" class="field" >
+    <mat-label>Selecione o resposável que deseja atualizar </mat-label>
+
+    <mat-select selected="setor" [formControl]="id">
+      <mat-option *ngFor="let setor of responsaveis" [value]="setor.values">
+        {{setor.values}} - {{setor.label}}
+
+      </mat-option>
+
+    </mat-select>
+
+  </mat-form-field>
+</form>
+  <form [formGroup]="form" class="form">
+  <form  class = "example-form" >
+    <mat-form-field  class = "field"  appear = "fill" >
+      <mat-label > Atualização </mat-label >
+      <input [(ngModel)]="responsavel.setor" [formControl]="setor" required name="" matInput maxlength="100" placeholder="Ex. Financeiro interno">
+    </mat-form-field >
+
+
+    <button (click)="update()" [disabled]="errorValidSetor()" mat-stroked-button color="accent">ATUALIZAR</button>
+    <button (click)="cancel()" mat-stroked-button color="warn">CANCELAR</button>
+</form>
+  </form>

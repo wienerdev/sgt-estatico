@@ -1,0 +1,45 @@
+<form class="form">
+
+  <h1>ATUALIZAR TAREFA</h1>
+
+
+  <mat-form-field appearance="fill" class="field">
+    <mat-label>Título da Tarefa</mat-label>
+    <input [(ngModel)]="tarefa.titulo" [formControl]="titulo" required titulo="titulo" maxlength="100" matInput placeholder="Ex: Levantamento de Requisitos">
+    <mat-error *ngIf="titulo.invalid">{{ errorValidTitulo() }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="field">
+    <mat-label>Descrição da Tarefa</mat-label>
+    <input [(ngModel)]="tarefa.descricao" [formControl]="descricao" required descricao="descricao" maxlength="100" matInput placeholder="Ex: Levantas os requisitos para implementar um CRuD das Tarefas">
+    <mat-error *ngIf="descricao.invalid">{{ errorValidDescricao() }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="field">
+    <mat-label>Status da Tarefa</mat-label>
+    <input [(ngModel)]="tarefa.status" [formControl]="status" required status="status" maxlength="100" matInput placeholder="Ex: Pendente">
+    <mat-error *ngIf="status.invalid">{{ errorValidStatus()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="field">
+    <mat-label>Selecione o Tipo de Tarefa</mat-label>
+    <mat-select [(ngModel)]="tarefa.tipoTarefa.id" [formControl]="tipoTarefa"  >
+      <mat-option *ngFor="let tt of tiposTarefa" [value]="tt.values">
+        {{tt.label}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="field">
+    <mat-label>Selecione o Setor Responsável</mat-label>
+    <mat-select [(ngModel)]="tarefa.responsavel.id" [formControl]="responsavel"  >
+      <mat-option *ngFor="let tt of resposaveis" [value]="tt.values">
+        {{tt.label}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <button (click)="salvar()" [disabled]="errorValidTitulo() || errorValidDescricao() || errorValidStatus()" mat-stroked-button color="accent">Atualizar</button>
+  <button (click)="cancel()" mat-stroked-button color="warn">CANCELAR</button>
+</form>

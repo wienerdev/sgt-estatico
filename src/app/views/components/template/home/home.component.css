@@ -1,0 +1,45 @@
+* {
+  color: azure;
+   text-decoration: none;
+   font-family: 'Anonymous Pro', monospace;
+}
+
+.mat-card {
+  margin-top: 10%;
+  width: 40%;
+  margin-left: 7rem;
+  color:#FFFF00;
+}
+
+img {
+  width: 40%;
+  margin-left: 700px;
+  margin-top: -18%;
+}
+
+.home-text {
+  text-decoration: justify;
+  width: 80%;
+  margin-top: 11%;
+  margin-left: 14%;
+}
+
+.img-home {
+  margin-left: 3rem;
+}
+
+.text span {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: larger;
+  color: azure;
+}
+
+.tutorial-button {
+  margin-top: 2%;
+  margin-left: 5%;
+  color:#64B9FF;
+}
+
+body {
+  background-color: #262526;
+}

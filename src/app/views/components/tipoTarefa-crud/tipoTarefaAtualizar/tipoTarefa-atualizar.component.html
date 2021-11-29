@@ -1,0 +1,29 @@
+<form class="form mat-elevation-z0">
+
+  <h1>ATUALIZAR TIPO TAREFA</h1>
+
+  <mat-form-field appearance="fill" class="field" >
+    <mat-label>Selecione o Tipo de Tarefa que deseja atualizar </mat-label>
+
+    <mat-select selected="tipotarefa" [formControl]="id">
+      <mat-option *ngFor="let descricao of tipoTarefas" [value]="descricao.values">
+        {{descricao.values}} - {{descricao.label}}
+
+      </mat-option>
+
+    </mat-select>
+
+  </mat-form-field>
+</form>
+<form [formGroup]="form" class="form">
+  <form  class = "example-form" >
+    <mat-form-field  class = "field"  appear = "fill" >
+      <mat-label > Atualização </mat-label >
+      <input [(ngModel)]="tipoTarefa.descricao" [formControl]="descricao" required name="" matInput maxlength="100" placeholder="Ex. Financeiro interno">
+    </mat-form-field >
+
+
+    <button (click)="update()" [disabled]="errorValidDescricao()" mat-stroked-button color="accent">ATUALIZAR</button>
+    <button (click)="cancel()" mat-stroked-button color="warn">CANCELAR</button>
+  </form>
+</form>

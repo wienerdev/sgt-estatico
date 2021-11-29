@@ -1,0 +1,22 @@
+<form class="form">
+
+  <h1>NOVO COMENTÁRIO</h1>
+
+
+
+  <mat-form-field appearance="fill" class="field">
+    <mat-label>Data de Referência</mat-label>
+    <input [(ngModel)]="comentario.data" [formControl]="data" required data="data" maxlength="400" matInput placeholder="Ex: 22/07 ou 22/07/2021 ">
+    <mat-error *ngIf="data.invalid">{{ errorValidData() }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="field">
+    <mat-label>Descrição do Comentário</mat-label>
+    <input [(ngModel)]="comentario.descricao" [formControl]="descricao" required descricao="descricao" maxlength="400" matInput placeholder="Ex: Estamos esperando a entrega dos requisitos para iniciarmos a codificação.">
+    <mat-error *ngIf="descricao.invalid">{{ errorValidDescricao() }}</mat-error>
+  </mat-form-field>
+
+
+  <button (click)="salvar()" [disabled]="errorValidData() || errorValidDescricao()" mat-stroked-button color="accent">Salvar</button>
+  <button (click)="cancel()" mat-stroked-button color="warn">CANCELAR</button>
+</form>
