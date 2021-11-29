@@ -4,10 +4,10 @@
 
 
 
-  <mat-form-field appearance="fill" class="field">
-    <mat-label>Novo Tipo de Tarefa</mat-label>
-    <input [(ngModel)]="tipoTarefa.descricao" [formControl]="descricao" required descricao="descricao" maxlength="300" matInput placeholder="Ex: O objetivo é entregar o Fornt end funcionando de forma integrada com o back end">
-    <mat-error *ngIf="descricao.invalid">{{ errorValidDescricao() }}</mat-error>
+  <mat-form-field style="color: aliceblue;" appearance="fill" class="field">
+    <mat-label style="color: aliceblue;" >Novo Tipo de Tarefa</mat-label>
+    <input style="color: aliceblue;" [(ngModel)]="tipoTarefa.descricao" [formControl]="descricao" required descricao="descricao" maxlength="400" matInput placeholder="Ex: O objetivo é entregar o Fornt end funcionando de forma integrada com o back end">
+    <mat-error style="color: aliceblue;" *ngIf="descricao.invalid">{{ errorValidDescricao() }}</mat-error>
   </mat-form-field>
 
 

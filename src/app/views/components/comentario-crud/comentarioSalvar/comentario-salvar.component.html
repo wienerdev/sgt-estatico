@@ -4,16 +4,16 @@
 
 
 
-  <mat-form-field appearance="fill" class="field">
-    <mat-label>Data de Referência</mat-label>
-    <input [(ngModel)]="comentario.data" [formControl]="data" required data="data" maxlength="400" matInput placeholder="Ex: 22/07 ou 22/07/2021 ">
-    <mat-error *ngIf="data.invalid">{{ errorValidData() }}</mat-error>
+  <mat-form-field appearance="fill" style="color: aliceblue;" class="field">
+    <mat-label style="color: aliceblue;" >Data de Referência</mat-label>
+    <input style="color: aliceblue;" [(ngModel)]="comentario.data" [formControl]="data" required data="data" maxlength="10" matInput placeholder="Ex: 22/07/2021 ">
+    <mat-error style="color: aliceblue;" *ngIf="data.invalid">{{ errorValidData() }}</mat-error>
   </mat-form-field>
 
-  <mat-form-field appearance="fill" class="field">
-    <mat-label>Descrição do Comentário</mat-label>
-    <input [(ngModel)]="comentario.descricao" [formControl]="descricao" required descricao="descricao" maxlength="400" matInput placeholder="Ex: Estamos esperando a entrega dos requisitos para iniciarmos a codificação.">
-    <mat-error *ngIf="descricao.invalid">{{ errorValidDescricao() }}</mat-error>
+  <mat-form-field appearance="fill" style="color: aliceblue;" class="field">
+    <mat-label style="color: aliceblue;">Descrição do Comentário</mat-label>
+    <input style="color: aliceblue;" [(ngModel)]="comentario.descricao" [formControl]="descricao" required descricao="descricao" maxlength="400" matInput placeholder="Ex: Estamos esperando a entrega dos requisitos para iniciarmos a codificação.">
+    <mat-error style="color: aliceblue;" *ngIf="descricao.invalid">{{ errorValidDescricao() }}</mat-error>
   </mat-form-field>
 
 

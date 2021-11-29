@@ -2,11 +2,11 @@
 
   <h1>ATUALIZAR COMENTÁRIO</h1>
 
-  <mat-form-field appearance="fill" class="field" >
-    <mat-label>Selecione o comentário que deseja atualizar </mat-label>
+  <mat-form-field style="color: aliceblue;" appearance="fill" class="field" >
+    <mat-label style="color: aliceblue;">Selecione o comentário que deseja atualizar </mat-label>
 
-    <mat-select selected="setor" [formControl]="id">
-      <mat-option *ngFor="let descricao of comentarios" [value]="descricao.values">
+    <mat-select style="color: aliceblue;" selected="setor" [formControl]="id">
+      <mat-option style="color: aliceblue;" *ngFor="let descricao of comentarios" [value]="descricao.values">
         {{descricao.values}} - {{descricao.label}}
 
       </mat-option>
@@ -15,11 +15,11 @@
 
   </mat-form-field>
 </form>
-<form [formGroup]="form" class="form">
+<form style="color: aliceblue;" [formGroup]="form" class="form">
   <form  class = "example-form" >
     <mat-form-field  class = "field"  appear = "fill" >
-      <mat-label > Atualização </mat-label >
-      <input [(ngModel)]="comentario.descricao" [formControl]="descricao" required name="" matInput maxlength="100" placeholder="Ex. Prazo de entrega adiantado">
+      <mat-label style="color: aliceblue;" > Atualização </mat-label >
+      <input style="color: aliceblue;" [(ngModel)]="comentario.descricao" [formControl]="descricao" required name="" matInput maxlength="400" placeholder="Ex. Prazo de entrega adiantado">
     </mat-form-field >
 
 
