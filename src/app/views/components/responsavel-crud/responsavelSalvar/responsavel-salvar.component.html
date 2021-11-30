@@ -4,7 +4,7 @@
 
 
 
-  <mat-form-field style="color: aliceblue;" appearance="fill" class="field">
+  <mat-form-field style="color: aliceblue;"  appearance="fill" class="field">
     <mat-label style="color: aliceblue;" >Novo Setor</mat-label>
     <input style="color: aliceblue;" [(ngModel)]="responsavel.setor" [formControl]="setor" required setor="setor" maxlength="400" matInput placeholder="Ex: Requisitos">
     <mat-error style="color: aliceblue;" *ngIf="setor.invalid">{{ errorValidSetor() }}</mat-error>

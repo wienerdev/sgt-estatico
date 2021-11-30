@@ -3,7 +3,7 @@
   <h1>NOVA TAREFA</h1>
 
 
-  <mat-form-field style="color: aliceblue;" appearance="fill" class="field">
+  <mat-form-field style="color: aliceblue;"  appearance="fill" class="field">
     <mat-label style="color: aliceblue;">Título da Tarefa</mat-label>
     <input style="color: aliceblue;" [(ngModel)]="tarefa.titulo" [formControl]="titulo" required titulo="titulo" maxlength="400" matInput placeholder="Ex: Levantamento de Requisitos">
     <mat-error style="color: aliceblue;" *ngIf="titulo.invalid">{{ errorValidTitulo() }}</mat-error>
