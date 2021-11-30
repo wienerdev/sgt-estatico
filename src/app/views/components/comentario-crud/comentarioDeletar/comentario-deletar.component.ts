@@ -32,7 +32,6 @@ export class ComentarioDeletarComponent implements OnInit {
 
   findAll(){
     this.service.findAllDropDown().subscribe((response)=>{
-      alert("Buscou todos.");
       this.comentarios = response;
     }, (error)=>{
       alert("Erro na requisição.");

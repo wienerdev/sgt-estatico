@@ -55,9 +55,7 @@ export class TarefaSalvarComponent implements OnInit {
 
   findAll(){
     this.tipoTarefaService.findAllDropDown().subscribe((response)=> {
-      //alert("Buscou todos.");
       this.tipoResponsaveisService.findAllDropDown().subscribe((responsavel) => {
-        //alert("Buscou todos.");
         this.tiposTarefa = response;
         this.resposaveis = responsavel;
       }, (error) => {

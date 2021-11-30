@@ -31,7 +31,6 @@ export class TipoTarefaDeletarComponent implements OnInit {
 
   findAll(){
     this.service.findAllDropDown().subscribe((response)=>{
-      alert("Buscou todos.");
       this.tipoTarefas = response;
     }, (error)=>{
       alert("Erro na requisição.");

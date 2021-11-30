@@ -46,7 +46,6 @@ export class ComentarioAtualizarComponent implements OnInit {
 
   findAll() {
     this.service.findAllDropDown().subscribe((response) => {
-      alert("Buscou todos.");
       console.log(response);
       this.comentarios = response;
       console.log(this.comentarios);
