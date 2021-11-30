@@ -32,7 +32,6 @@ export class ResponsavelDeletarComponent implements OnInit {
 
   findAll(){
     this.service.findAllDropDown().subscribe((response)=>{
-      alert("Buscou todos.");
       this.responsaveis = response;
     }, (error)=>{
       alert("Erro na requisição.");
