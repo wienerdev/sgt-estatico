@@ -66,7 +66,6 @@ export class TarefaAtualizarComponent implements OnInit {
       this.tiposTarefa = tiposTarefaData;
       this.tipoResponsaveisService.findAllDropDown().subscribe((resposaveisData) => {
         this.resposaveis = resposaveisData;
-        console.log('bunda'+this.idParam);
         this.service.encontrarPorId(this.idParam).subscribe(tarefaData => {
           this.tarefa = tarefaData;
         })
