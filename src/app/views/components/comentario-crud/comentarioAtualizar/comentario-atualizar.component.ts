@@ -30,8 +30,10 @@ export class ComentarioAtualizarComponent implements OnInit {
 
   descricao = new FormControl('', [Validators.minLength(4)]);
 
+  idParam : null
 
   constructor(
+    private actRoute: ActivatedRoute,
     private router: Router,
     private service: ComentarioService,
     private route: ActivatedRoute,
@@ -40,21 +42,20 @@ export class ComentarioAtualizarComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.findAll();
-    this.form = this.buildForm();
+    this.carregarDados();
+   // this.findAll();
+   // this.form = this.buildForm();
   }
-
-  findAll() {
-    this.service.findAllDropDown().subscribe((response) => {
-      alert("Buscou todos.");
-      console.log(response);
-      this.comentarios = response;
-      console.log(this.comentarios);
-    }, (error) => {
-      alert("Erro na requisição.");
-
-    })
+  carregarDados(){
+    return this.service.findAllDropDown().subscribe((comentarioData)=> {
+      this.comentarios = comentarioData;
+              
+      }, (error) => {
+        alert("Erro na requisição.");
+      })
+    
   }
+ 
 
   cancel(): void {
     this.router.navigate(['comentario'])
