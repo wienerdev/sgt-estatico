@@ -26,7 +26,10 @@ export class ResponsavelAtualizarComponent implements OnInit {
   //id: number = 13;
   setor = new FormControl('', [Validators.minLength(4)]);
 
-  constructor(
+  idParam : null
+  ResponsavelService: any;
+
+  constructor(private actRoute: ActivatedRoute,
     private router: Router,
     private service: ResponsavelService,
     private route: ActivatedRoute,
@@ -35,31 +38,48 @@ export class ResponsavelAtualizarComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.findAll();
-    this.form = this.buildForm();
+
+    //this.findAll();
+    //this.form = this.buildForm();
+
+    this.carregarDados();
   }
 
-  findAll() {
-    this.service.findAllDropDown().subscribe((response) => {
-      alert("Buscou todos.");
-      console.log(response);
-      this.responsaveis = response;
-      console.log(this.responsaveis);
+ // findAll() {
+  //  this.service.findAllDropDown().subscribe((response) => {
+  //    alert("Buscou todos.");
+  ///    console.log(response);
+  ///    this.responsaveis = response;
+  //    console.log(this.responsaveis);
+  //  }, (error) => {
+    //  alert("Erro na requisição.");
+
+ //   })
+//  }
+
+carregarDados(){
+  return this.ResponsavelService.findAllDropDown().subscribe((resposaveisData) => {
+      this.responsaveis = resposaveisData;
+       this.service.encontrarPorId(this.idParam).subscribe(responsaveisData => {
+        this.responsavel = responsaveisData;
+      })
     }, (error) => {
       alert("Erro na requisição.");
-
     })
-  }
+  
+}
+
+
 
   cancel(): void {
     this.router.navigate(['responsavel'])
   }
 
-  buildForm() {
-    return this.formBuilder.group({
-      id: [null, [Validators.required]],
-    }, {updateOn: 'change'});
-  }
+ // buildForm() {
+   // return this.formBuilder.group({
+     // id: [null, [Validators.required]],
+   // }, {updateOn: 'change'});
+ // }
 
   update(): void {
   // console.log(this.id.value);
