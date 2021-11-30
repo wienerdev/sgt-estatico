@@ -12,16 +12,9 @@ export class HomeComponent implements OnInit {
   constructor(public dialog:MatDialog) { }
 
   ngOnInit(): void {
-    window.onload = function() {
-      if(!window.location.hash) {
-          this.window.location = window.location + '#carregar';
-          window.location.reload();
-      }
+   
   }
-  }
-
- 
-
+  
   openDialog(){
     const dialogRef = this.dialog.open(HomeDialogComponent);
 
