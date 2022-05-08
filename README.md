@@ -1,27 +1,52 @@
-BsbTurma
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
+<br>
+<h1 align="center">
+Sistema de Gerenciamento de Tarefas (Frontend) 📑 
+</h1>
+<br>
+<h2>🖥️ Tela principal </h2>
+  <p align="center">
+    <img src="https://user-images.githubusercontent.com/78852609/142920693-feca2521-c893-4e75-bc80-a6022b24474e.gif" alt="sgt" border="0" width="100%">
+  </p>
+</br>
 
-## Development server
+## 💬 Sobre o repositório
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Este projeto foi inspirado por todas as aplicações Open Sources existentes, utilizando das mais novas tecnologias no mundo de desenvolvimento e do mercado, como Java, Spring Boot, Maven, Hibernate, Angular, PostgreSQL e mais. Foi criado, principalmente, com o intuito de oferecer um serviço gratuito a quem quiser usar, tanto para gerenciamento das tarefas do seu dia a dia, quanto como um projeto exemplo de utilização das diversas tecnologias citadas.
 
-## Code scaffolding
+<br>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🛠 Tecnologias utilizadas
 
-## Build
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+* [Angular CLI](https://angular.io/cli)
+* [Angular Material](https://material.angular.io/)
+* [Docker](https://www.docker.com/)
+* [Java](https://www.oracle.com/br/java/)
+* [Maven](https://maven.apache.org/)
+* [Node.js](https://nodejs.org/en/)
+* [Hibernate](https://hibernate.org/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [Liquibase](https://www.liquibase.org/)
 
-## Running unit tests
+<br>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📌 Como utilizar?
 
-## Running end-to-end tests
+* Para executar o projeto localmente, acesse a [Wiki!](https://github.com/CaioACN/sgt-2/wiki/Configura%C3%A7%C3%B5es-de-Ambiente-(Linux-e-Windows))
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+<br>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## 🧠 Links importantes
+
+* [Documentação oficial do Lombok](https://projectlombok.org/)
+* [Documentação oficial do Map Struct](https://mapstruct.org/)
+* [Referência para o padrão arquitetural REST](https://restfulapi.net/)
+* [Palheta de atalhos de comandos do IntelliJ](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
+* [Site oficial do Spring](https://spring.io/)
+* [Site oficial do Spring Initialzr para setup do projeto](https://start.spring.io/)
+
+---
